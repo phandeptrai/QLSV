@@ -25,6 +25,7 @@ namespace QLSV
         {
             Console.WriteLine("nhap vao hoTen: ");
             hoTen = Console.ReadLine();
+            Console.WriteLine("nhap vao maSV: ");
             maSV = Console.ReadLine();
         }
         public virtual void hienThi()

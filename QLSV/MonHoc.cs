@@ -24,7 +24,6 @@ namespace QLSV
         }
         public void nhapMonHoc()
         {
-            Console.Read();
             Console.WriteLine("nhap vao soTinChi  " + tenMH+": ");
             soTinChi = int.Parse(Console.ReadLine());
             Console.WriteLine("nhap vao diem: "+ tenMH + ": ");

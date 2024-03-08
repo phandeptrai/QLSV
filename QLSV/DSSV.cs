@@ -34,6 +34,7 @@ namespace QLSV
                 Console.WriteLine("1. nhap SVCNTT: ");
                 Console.WriteLine("2. Nhap SVVL: ");
                 Console.WriteLine("3. Nhap SVVH: ");
+                Console.WriteLine("4. thoat: ");
                 Console.WriteLine("nhap vao lua chon: ");
                 d = int.Parse(Console.ReadLine());
 
@@ -43,14 +44,17 @@ namespace QLSV
                     case 1:
                         sv = new SVCNTT();
                         sv.nhapSV();
+                        danhSachSinhVien.Add(sv);
                         break;
                     case 2:
                         sv = new SVVL();
                         sv.nhapSV();
+                        danhSachSinhVien.Add(sv);
                         break;
                     case 3:
                         sv = new SVVH();
                         sv.nhapSV();
+                        danhSachSinhVien.Add(sv);
                         break;
                     default:
                         break;
@@ -61,16 +65,29 @@ namespace QLSV
 
 
             } while (d == 1 || d == 2 || d == 3);
+            
         }
         public void hienThiSV(double diem)
         {
             foreach (SV sv in danhSachSinhVien)
             {
-                if(sv.tinhDiem() > 5)
+                if(sv.tinhDiem() > diem)
                 {
                     sv.hienThi();
                 }
             }
         }
+
+        public void DSTN()
+        {
+            foreach(SV sv in danhSachSinhVien)
+            {
+                if (sv.tinhDiem() > 5)
+                {
+                    sv.hienThi();
+                }
+            }
+        }
+      
     }
 }

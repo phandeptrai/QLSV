@@ -49,8 +49,10 @@ namespace QLSV
         }
         public override void hienThi()
         {
+            Console.WriteLine("---------------------------");
             base.hienThi();
             Console.WriteLine("diemTB: " + tinhDiem());
+            Console.WriteLine("---------------------------");
 
         }
     }
